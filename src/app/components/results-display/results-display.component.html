@@ -7,9 +7,8 @@
         }
 
         <mat-card-header>
-          <!-- Aircraft or Routing -->
           <mat-card-title>
-            {{ result.registration || result.flightroute?.callsign }}
+            {{ result.mode_s || result.flightroute?.callsign }}
           </mat-card-title>
           <mat-card-subtitle>
             {{ result.manufacturer || result.flightroute?.airline?.name || 'Unknown' }}
@@ -19,9 +18,12 @@
         <mat-card-content>
           <!-- Aircraft Info -->
           @if (result.type) {
-            <p>Type: {{ result.type }}</p>
-            <p>Country: {{ result.registered_owner_country_name }}</p>
-            <p>Owner: {{ result.registered_owner }}</p>
+            <p><strong> Type : </strong> {{ result.type }}</p>
+            <p>
+              <strong>Country : </strong>
+               {{ result.registered_owner_country_name }}</p>
+            <p><strong>Owner : </strong>{{ result.registered_owner }}</p>
+            <p><strong> Registration : </strong>{{result.registration}}</p>
           } @else {
             @if (result.flightroute) {
               <div>

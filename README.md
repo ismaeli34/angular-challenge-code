@@ -2,7 +2,7 @@
 
 ## Aircraft  ( Search and enter 1-n aircraft values seperated by commas)
 ## Mode S codes : A915CF, A7036C, AA3AE6, A46F24
-<img width="2868" height="1524" alt="image" src="https://github.com/user-attachments/assets/32edb6b5-f1bc-430c-872f-763421c33b11" />
+<img width="1437" height="765" alt="image" src="https://github.com/user-attachments/assets/f7880ba1-061f-4483-a5f8-5e83b5994c97" />
 
 ## Callsign ( Search and enter 1-n  callsign values seperated by commas)
 ## Callsigns to identify a specific flight : ENT56EK, TOM188, CSN3378, JZA595, AAL2251

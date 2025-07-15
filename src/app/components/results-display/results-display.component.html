@@ -1,0 +1,38 @@
+@if (results.length > 0) {
+  <div class="results-container">
+    @for (result of results; track result) {
+      <mat-card class="result-card">
+        @if (result.url_photo) {
+          <img [src]="result.url_photo" class="card-image" alt="Aircraft photo" />
+        }
+
+        <mat-card-header>
+          <!-- Aircraft or Routing -->
+          <mat-card-title>
+            {{ result.registration || result.flightroute?.callsign }}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{ result.manufacturer || result.flightroute?.airline?.name || 'Unknown' }}
+          </mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <!-- Aircraft Info -->
+          @if (result.type) {
+            <p>Type: {{ result.type }}</p>
+            <p>Country: {{ result.registered_owner_country_name }}</p>
+            <p>Owner: {{ result.registered_owner }}</p>
+          } @else {
+            @if (result.flightroute) {
+              <div>
+                <p><strong>Airline:</strong> {{ result.flightroute.airline?.name }}</p>
+                <p><strong>Origin:</strong> {{ result.flightroute.origin?.name }} ({{ result.flightroute.origin?.iata_code }}) - {{ result.flightroute.origin?.country_name }}</p>
+                <p><strong>Destination:</strong> {{ result.flightroute.destination?.name }} ({{ result.flightroute.destination?.iata_code }}) - {{ result.flightroute.destination?.country_name }}</p>
+              </div>
+            }
+          }
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+}

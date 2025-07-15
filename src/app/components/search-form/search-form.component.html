@@ -1,0 +1,28 @@
+<mat-card class="center-card">
+  <form [formGroup]="form" (ngSubmit)="onSearch()">
+    <mat-radio-group formControlName="searchType">
+      <mat-radio-button value="aircraft">Aircraft (Mode-S / Registration)</mat-radio-button>
+      <mat-radio-button value="callsign">Callsign</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="full-width">
+      <mat-label>Search</mat-label>
+      <input name="query" matInput formControlName="query" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Search</button>
+  </form>
+</mat-card>
+
+<app-results-display [results]="searchResults"></app-results-display>
+
+@if (errorMessages.length > 0) {
+  <div class="error-container">
+    @for (msg of errorMessages; track msg) {
+      <mat-card color="warn" class="error-card">
+        <mat-icon class="error-icon">error</mat-icon>
+        <span class="error-text">{{ msg }}</span>
+      </mat-card>
+    }
+  </div>
+}

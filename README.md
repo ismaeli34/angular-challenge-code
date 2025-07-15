@@ -1,9 +1,9 @@
 # Angular Challenge Code
 
-## Aircraft
+## Aircraft enter 1-n values seperated by commas
 <img width="2868" height="1524" alt="image" src="https://github.com/user-attachments/assets/32edb6b5-f1bc-430c-872f-763421c33b11" />
 
-## Callsign
+## Callsign enter 1-n values seperated by commas
 
 <img width="1437" height="763" alt="image" src="https://github.com/user-attachments/assets/6e23bdff-6f58-4264-a907-7b08d3dd9fcc" />
 
